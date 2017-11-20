@@ -184,6 +184,7 @@ get_dev_arch() {
 # Download and extract from dev/version mirror.
 get_dev_ext() {
   if [ ! -z "$1" ]; then
+    echo "get_dev_ext  -->  ${urlDev}/${_AEGIR_XTS_VRN}/$1"
     curl ${crlGet} "${urlDev}/${_AEGIR_XTS_VRN}/$1" -o "$1"
     extract_archive "$1"
   fi
@@ -193,6 +194,7 @@ get_dev_ext() {
 # Download and extract from dev/static.
 get_dev_stc() {
   if [ ! -z "$1" ]; then
+    echo "get_dev_stc  -->  ${urlDev}/${_AEGIR_XTS_VRN}/static/$1"
     curl ${crlGet} "${urlDev}/${_AEGIR_XTS_VRN}/static/$1" -o "$1"
     extract_archive "$1"
   fi
